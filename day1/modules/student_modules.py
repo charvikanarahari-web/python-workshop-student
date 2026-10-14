@@ -1,20 +1,15 @@
-from modules.result_calculator import calculate_percentage
+
+mark1 = float(input("Enter first mark: "))
+mark2 = float(input("Enter second mark: "))
+mark3 = float(input("Enter third mark: "))
 
 
-student_name = input("Enter student name: ")
+def calculate_percentage(mark1, mark2, mark3):
+    total = mark1 + mark2 + mark3
+    percentage = total / 3
+    return percentage
 
-marks_python = float(input("Enter Python marks: "))
-marks_math = float(input("Enter Mathematics marks: "))
-marks_comm = float(input("Enter Communication marks: "))
 
-# TODO:
-# Import the calculate_percentage function
-# from your module
+percentage = calculate_percentage(mark1, mark2, mark3)
 
-# TODO:
-# Calculate the percentage using the imported function
-
-percentage = 0
-print("\n--- Result ---")
-print(f"Student: {student_name}")
-print(f"Percentage: {percentage}")
+print("This is the percentage:", percentage)
